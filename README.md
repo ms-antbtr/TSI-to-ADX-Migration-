@@ -8,7 +8,7 @@ The purpose of this guide is to run through the recommended migration approach f
 
 - Gen1 to ADX
 - Gen2 to ADX
-- ADX Partner Ecosystem
+- Partner Ecosystem
 - Reference Architecture
 
 # Azure TSI 
@@ -33,5 +33,15 @@ By analyzing structured, semi-structured, and unstructured data across time seri
 
 <img width="596" alt="image" src="https://user-images.githubusercontent.com/72390693/169021276-5799fa43-7435-4c6a-961d-2e373685c311.png">
 
+
 # Migration Approaches
 
+As TSI has two offerings(Gen1 and Gen2); depending on which offering you have will dictate the migration steps as they both have different migration approaches.
+
+- TSI Gen1
+
+TSI Gen1 doesn’t have cold storage or hierarchy capability. All data has fixed retention. Extracting data and mapping it to ADX would be complicated and time-consuming task for TSI developers and the customer. Suggestion migration path is to set up parallel data ingestion to ADX. After fixed data retention period passes TSI environment can be deleted as ADX will contain same data.
+
+- TSI Gen2
+
+TSI Gen2 stores all data on cold storage using Parquet format as a blob in customer’s subscription. To migrate data customer, should take the blob and import it into ADX using bulk upload capability Lightingest. 
