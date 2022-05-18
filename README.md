@@ -6,10 +6,10 @@ The Time Series Insights (TSI) service will no longer be supported after March 2
 
 The purpose of this guide is to run through the recommended migration approach from TSI to ADX as well as give reference architectures. What we will cover is the following:
 
-- Gen1 to ADX
-- Gen2 to ADX
+- TSI Gen1 to ADX
+- TSI Gen2 to ADX
 - Partner Ecosystem
-- Reference Architecture
+- Integration Scenarios
 
 # Azure TSI 
 
